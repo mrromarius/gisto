@@ -31,6 +31,8 @@ class GistoWindow(QtWidgets.QMainWindow, Ui_Histogram):
         int(self.lineEdit_11.text()),int(self.lineEdit_12.text()),int(self.lineEdit_13.text()),int(self.lineEdit_14.text()),int(self.lineEdit_15.text()), 
         int(self.lineEdit_16.text()),int(self.lineEdit_17.text()),int(self.lineEdit_18.text()),int(self.lineEdit_19.text()), int(self.lineEdit_20.text()),
         int(self.lineEdit_21.text()),int(self.lineEdit_22.text()),int(self.lineEdit_23.text()),int(self.lineEdit_24.text()), int(self.lineEdit_25.text()),
+        0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0]
+        gg_data = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
         int(self.lineEdit_26.text()),int(self.lineEdit_27.text()),int(self.lineEdit_28.text()),int(self.lineEdit_29.text()), int(self.lineEdit_30.text()), 
         int(self.lineEdit_31.text()),int(self.lineEdit_32.text()),int(self.lineEdit_33.text()),int(self.lineEdit_34.text()), int(self.lineEdit_35.text()), 
         int(self.lineEdit_36.text()),int(self.lineEdit_37.text()),int(self.lineEdit_38.text()),int(self.lineEdit_39.text()), int(self.lineEdit_40.text()), 
@@ -42,9 +44,9 @@ class GistoWindow(QtWidgets.QMainWindow, Ui_Histogram):
         
         self.graphWidget.setGeometry(QRect(410, 70, 800, 600))
 
-        self.graphWidget.plot(y, ya_data, stepMode=True, fillLevel = 0, brush=(140,150,0,255))
-        # self.graphWidget.plot([1,2,3,4,5],[2,3,4,3], stepMode=True, fillLevel = 0, brush=(140,150,0,255))
-        # self.graphWidget.plot([1,2,3,4,5],[5,3,4,9], stepMode=True, fillLevel = 0, brush=(140,230,0,2))
+        # self.graphWidget.plot(y, ya_data, stepMode=True, fillLevel = 0, brush=(140,150,0,255))
+        self.graphWidget.plot(y,ya_data, stepMode=True, fillLevel = 0, brush=(140,150,0,255))
+        self.graphWidget.plot(y,gg_data, stepMode=True, fillLevel = 0, brush=(140,230,0,2))
 
         grid = QtWidgets.QGridLayout()
         grid.addWidget(self.graphWidget, 3, 4, Qt.AlignCenter)
