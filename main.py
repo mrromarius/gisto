@@ -39,15 +39,13 @@ class GistoWindow(QtWidgets.QMainWindow, Ui_Histogram):
         int(self.lineEdit_41.text()),int(self.lineEdit_42.text()),int(self.lineEdit_43.text()),int(self.lineEdit_44.text()), int(self.lineEdit_45.text()),
         int(self.lineEdit_46.text()),int(self.lineEdit_47.text()),int(self.lineEdit_48.text()),int(self.lineEdit_49.text()), int(self.lineEdit_50.text())]
         y = [i for i in range(1, 52)]
-        # self.graphWidget.setBackground('w')
         self.graphWidget.clear()
         
         self.graphWidget.setGeometry(QRect(410, 70, 800, 600))
 
-        # self.graphWidget.plot(y, ya_data, stepMode=True, fillLevel = 0, brush=(140,150,0,255))
-        self.graphWidget.plot(y,ya_data, stepMode=True, fillLevel = 0, brush=(140,150,0,255))
-        self.graphWidget.plot(y,gg_data, stepMode=True, fillLevel = 0, brush=(140,230,0,2))
-
+        self.graphWidget.plot(y,ya_data, name="Yandex", stepMode=True, fillLevel = 0, brush=(140,230,32,150))
+        self.graphWidget.plot(y,gg_data, name="Google", stepMode=True, fillLevel = 0, brush=(255,219,139,180))
+        self.graphWidget.addLegend()
         grid = QtWidgets.QGridLayout()
         grid.addWidget(self.graphWidget, 3, 4, Qt.AlignCenter)
 
