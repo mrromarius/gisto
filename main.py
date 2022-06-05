@@ -173,7 +173,6 @@ class MainWindow(QtWidgets.QMainWindow):
         super(MainWindow, self).__init__()
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
-
         self.ui.pushButton_5.clicked.connect(self.click_ontol)
         self.ui.pushButton_6.clicked.connect(self.click_gisto)
         self.ui.pushButton.clicked.connect(self.click_table1)

@@ -655,7 +655,7 @@ class Ui_Histogram(object):
 
     def retranslateUi(self, Histogram):
         _translate = QtCore.QCoreApplication.translate
-        Histogram.setWindowTitle(_translate("Histogram", "Dialog"))
+        Histogram.setWindowTitle(_translate("Histogram", "Гистограмма"))
         self.pushButton.setText(_translate("Histogram", "На главную "))
         self.pushButton_gisto.setText(_translate("Histogram", "Загрузить график"))
         self.label.setText(_translate("Histogram", "Запросы в Яндекс"))

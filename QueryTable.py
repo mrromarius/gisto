@@ -877,7 +877,7 @@ class Ui_QueryTable(object):
 
     def retranslateUi(self, QueryTable1):
         _translate = QtCore.QCoreApplication.translate
-        QueryTable1.setWindowTitle(_translate("QueryTable1", "Dialog"))
+        QueryTable1.setWindowTitle(_translate("QueryTable1", "Таблица запросов"))
         self.label_5.setText(_translate("QueryTable1", "Запрос:"))
         self.label_4.setText(_translate("QueryTable1", "Тип ресурса:"))
         self.label_6.setText(_translate("QueryTable1", "Запрос:"))
